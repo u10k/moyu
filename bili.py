@@ -39,12 +39,12 @@ for bid in bili_ids:
 #                 }
                 "msgtype": "news",
                 "news": {
-                    "articles" : [
-                        "title": video['title'], 
-                        "description": video['description']+'B站', 
+                    "articles": {
+                        "title": video['title'],
+                        "description": video['description']+'B站',
                         "url": "https://www.bilibili.com/video/av%s" %(video['aid']),
-                        "picurl": 'http:'+video['pic'], 
-                    ]
+                        "picurl": 'http:'+video['pic'],
+                    }
                 }
             }
             requests.post(url,
