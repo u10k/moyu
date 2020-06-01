@@ -7,16 +7,16 @@ url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=38db01c7-1d8b-47db-a
 bili_ids = ['37663924','437316738','390461123','517327498','254463269','163637592']
 yesterday = time.time()-60*60*24*2  # 1天前
 
-obj = {
-    "msgtype": "text", 
-    "text": {
-        "content": 'B站:'+time.strftime('%Y-%m-%d',time.localtime(time.time())), 
-    }
-}
-requests.post(url,
-    headers={'Content-Type': 'application/json'},
-    data=json.dumps(obj)
-)
+# obj = {
+#     "msgtype": "text", 
+#     "text": {
+#         "content": 'B站:'+time.strftime('%Y-%m-%d',time.localtime(time.time())), 
+#     }
+# }
+# requests.post(url,
+#     headers={'Content-Type': 'application/json'},
+#     data=json.dumps(obj)
+# )
 
 
 
@@ -39,12 +39,14 @@ for bid in bili_ids:
 #                 }
                 "msgtype": "news",
                 "news": {
-                    "articles": {
-                        "title": video['title'],
-                        "description": video['description']+'B站',
-                        "url": "https://www.bilibili.com/video/av%s" %(video['aid']),
-                        "picurl": 'http:'+video['pic'],
-                    }
+                    "articles": [
+                        {
+                            "title": video['title'],
+                            "description": video['description']+'B站',
+                            "url": "https://www.bilibili.com/video/av%s" %(video['aid']),
+                            "picurl": 'http:'+video['pic'],
+                        }
+                    ]
                 }
             }
             requests.post(url,
