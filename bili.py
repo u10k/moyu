@@ -54,7 +54,3 @@ for bid in bili_ids:
                 headers={'Content-Type': 'application/json'},
                 data=json.dumps(obj)
             )
-            requests.post(url2,
-                headers={'Content-Type': 'application/json'},
-                data=json.dumps(obj)
-            )
