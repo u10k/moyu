@@ -4,8 +4,8 @@ import time
 
 url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=38db01c7-1d8b-47db-aee0-ae9a6f43772b'
 url2 = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=819eb666-8bc3-4f66-a6a7-173ce9a61a93'
-# 半佛，朱一旦，大骚，罗翔说刑法，毕导THU，何同学
-bili_ids = ['37663924','437316738','390461123','517327498','254463269','163637592']
+# 半佛，朱一旦，大骚，罗翔说刑法，毕导THU，何同学，科技美学, 局座, 手工耿， 敬汉卿
+bili_ids = ['37663924','437316738','390461123','517327498','254463269','163637592', '3766866', '33683045', '280793434', '9824766']
 yesterday = time.time()-60*60*24*1  # 1天前
 
 # obj = {
