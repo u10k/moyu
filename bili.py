@@ -6,7 +6,7 @@ url = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=38db01c7-1d8b-47db-a
 url2 = 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=819eb666-8bc3-4f66-a6a7-173ce9a61a93'
 # 半佛，朱一旦，大骚，罗翔说刑法，毕导THU，何同学
 bili_ids = ['37663924','437316738','390461123','517327498','254463269','163637592']
-yesterday = time.time()-60*60*24*2  # 1天前
+yesterday = time.time()-60*60*24*1  # 1天前
 
 # obj = {
 #     "msgtype": "text", 
